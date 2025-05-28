@@ -4,6 +4,8 @@ import SingleColor from './SingleColor'
 import Values from 'values.js'
 
 function App (){
+  
+ 
 
   const [color, setColor] = useState('')
    const [error, setError] = useState(false)
@@ -22,13 +24,13 @@ function App (){
 
    return(
      <>
-     <section className='container'>
-      <h3>Color generator</h3>
+     <section className='container text-center flex items-center pl-2 h-[100px]'>
+      <h3 className='mb-0 mr-2'>Color generator</h3>
       <form onSubmit={handleSubmit}>
         <input type="text" value={color}
         onChange={(e) => setColor(e.target.value)} 
         placeholder='#f15025' className={`${error ? 'error' :  null}`}/>
-        <button type='sbmit' className='btn'>Submit</button>
+        <button type='submit' className='btn'>Submit</button>
       </form>
      </section>
      <section className='colors'>
